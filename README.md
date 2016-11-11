@@ -1,5 +1,5 @@
 #seqgen-go
-seqgen(https://github.com/dawnsea/seqgen)의 go-lang 버전 입니다. seqgen과는 다르게 memcached는 지원하지 않습니다.
+seqgen([https://github.com/dawnsea/seqgen](https://github.com/dawnsea/seqgen))의 go-lang 버전 입니다. seqgen과는 다르게 memcached는 지원하지 않습니다.
 go-lang 공부용으로 뚝딱 만든 것이기 때문에 상용으로 사용하시는 것은 강력하게 비추합니다.
 
 ## Requirement
@@ -35,4 +35,4 @@ ab -c 100 -n 100000 http://localhost:8080/
 ![seqgen-go performance](seqgen-go.png)
 
 ## License
-
+Apache License Version 2.0
