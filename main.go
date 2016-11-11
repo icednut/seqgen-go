@@ -21,11 +21,13 @@ func runServer() {
         for {
             sequencePiece := <-sequenceGenerateChannel
             sequence = sequence + sequencePiece
+            fmt.Println("seqNo: ", sequence)
             sequenceReceiveChannel <- sequence
         }
     }()
 
     http.HandleFunc("/", seqGenerator(sequenceReceiveChannel, sequenceGenerateChannel))
+    fmt.Println("Waiting for request... (from :8080)")
     http.ListenAndServe(":8080", nil)
 }
 
